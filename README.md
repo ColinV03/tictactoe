@@ -1,3 +1,21 @@
+# Tic-TAC-Toe! 
+
+The age old game that allows two users to duke it out in an old fashoned game of tic-tac-toe! 
+
+Connect three in a row either: 
+1. Horizontally
+2. Vertically
+3. Diagonally
+
+And that's it! You win the game! 
+
+This project was found here at: [TheOdinProject.org](https://theodinproject.com/paths/full-stack-javascript/courses/javascript/lessons/tic-tac-toe)
+The project is going to be done in react, bootstrapped using the create-react-app, using both class based, and functional components to keep track of scoring and judging. 
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
