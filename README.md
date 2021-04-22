@@ -9,7 +9,7 @@ Connect three in a row either:
 
 And that's it! You win the game! 
 
-This project was found here at: [TheOdinProject.org](https://theodinproject.com/paths/full-stack-javascript/courses/javascript/lessons/tic-tac-toe)
+This project was found here at: [TheOdinProject.com](https://theodinproject.com/paths/full-stack-javascript/courses/javascript/lessons/tic-tac-toe)
 The project is going to be done in react, bootstrapped using the create-react-app, using both class based, and functional components to keep track of scoring and judging. 
 
 

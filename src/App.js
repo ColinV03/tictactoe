@@ -1,27 +1,15 @@
 
 import './App.css';
+import Gameboard from "./Components/Gameboard";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <h1>Tic-Tac-TOE!</h1>
-        
+        <Gameboard />
 
-        <div className="grid">
-          <button className="square">Space</button> 
-          <button className="square">Space</button> 
-          <button className="square">Space</button> 
-
-          <button className="square">Space</button> 
-          <button className="square">Space</button> 
-          <button className="square">Space</button>
-
-          <button className="square">Space</button> 
-          <button className="square">Space</button> 
-          <button className="square">Space</button> 
-
-        </div>
+      
       </header>
     </div>
   );
