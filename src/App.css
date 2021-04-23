@@ -47,3 +47,10 @@
 .square{
   padding: 40px;
 }
+
+.square :hover{
+  opacity: 0.1;
+
+
+}
+

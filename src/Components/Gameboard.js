@@ -4,8 +4,11 @@ class Gameboard extends Component {
   constructor(props) {
     super(props);
     this.state = {
-        playerId: '',
-        isPlayerOneTurn: true,
+      playerOneId: '',
+      playerTwoId: '',
+      isPlayerOneTurn: false,
+      playerOneSign: "X",
+      playerTwoSign: "O",
         
     };
   }
@@ -17,45 +20,64 @@ class Gameboard extends Component {
         })
     }
     
-  handleClick(e) {
-    console.log(e.target.id);
+  handleClick = (e)  => {
+    this.setState({
+      isPlayerOneTurn: !this.state.isPlayerOneTurn,
+    })
+    console.log(` The ID is: ${e.target.id} and the status of player turn is: ${this.state.isPlayerOneTurn}`)
   }
   render() {
+
+    // let playerNames =() =>  this.state.playerOneId === '' ? '' : <div>{this.state.playerOneId} Versus {this.state.playerTwoId}</div>
       return (
         <div>
           <form>
-            <input name="playerId" placeholder="Your name?" value={this.state.playerId} onChange={this.handleChange}/>
-              </form>
-              <br></br>
-              <h1> {this.state.playerId}</h1>
+            <input
+              name="playerOneId"
+              placeholder="Player One Name?"
+              value={this.state.playerOneId}
+              onChange={this.handleChange}
+            />
+            <input
+              name="playerTwoId"
+              placeholder="Player Two Name?"
+              value={this.state.playerTwoId}
+              onChange={this.handleChange}
+            />
+          </form>
+
+
+          <br></br>
+          
+
           <div className="grid" onClick={this.handleClick}>
-            <button className="square" id="topLeft">
+            <button className="square" id="0">
               Space
             </button>
-            <button className="square" id="topCenter">
+            <button className="square" id="1">
               Space
             </button>
-            <button className="square" id="topRight">
-              Space
-            </button>
-
-            <button className="square" id="midLeft">
-              Space
-            </button>
-            <button className="square" id="midCenter">
-              Space
-            </button>
-            <button className="square" id="midRight">
+            <button className="square" id="2">
               Space
             </button>
 
-            <button className="square" id="botLeft">
+            <button className="square" id="3">
               Space
             </button>
-            <button className="square" id="botCenter">
+            <button className="square" id="4">
               Space
             </button>
-            <button className="square" id="botRight">
+            <button className="square" id="5">
+              Space
+            </button>
+
+            <button className="square" id="6">
+              Space
+            </button>
+            <button className="square" id="7">
+              Space
+            </button>
+            <button className="square" id="8">
               space
             </button>
           </div>
