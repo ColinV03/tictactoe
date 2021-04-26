@@ -41,11 +41,17 @@
 .grid{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  border-style: solid;
+  border-color: white;
+  border-radius: 10px;
 
 }
 
 .square{
   padding: 40px;
+  border-style: solid;
+  border-color: white;
+  border-radius: 2px;
 }
 
 .square :hover{
@@ -53,4 +59,17 @@
 
 
 }
+form{
+  border-style: solid;
+  border: 2px;
+  border-color: whitesmoke;
+  box-shadow: whitesmoke;
+}
+input {
+width: auto;
+height: auto;
+border-radius: 10%;
+
+}
+
 

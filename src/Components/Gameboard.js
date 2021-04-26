@@ -32,6 +32,7 @@ class Gameboard extends Component {
       })
   }
   setSquareValue = (e) => {
+    e.preventDefault();
     this.setState({
       board: {
       [e.target.id]: this.state.currentSign
@@ -56,6 +57,7 @@ class Gameboard extends Component {
   }
     
   handleClick = (e) => {
+    e.preventDefault();
     this.setCurrentSign();
     this.setSquareValue(e);
     // this.setState({
@@ -81,85 +83,94 @@ class Gameboard extends Component {
               placeholder="Player One Name?"
               value={this.state.playerOneId}
               onChange={this.handleChange}
+              type="text"
             />
             <input
               name="playerTwoId"
               placeholder="Player Two Name?"
               value={this.state.playerTwoId}
               onChange={this.handleChange}
+              type="text"
             />
           </form>
 
-
           <br></br>
-          
 
           <div className="grid">
-            <button 
-              className="square" 
-              id="ID0" 
-              value={this.state.board.ID0} 
-              onClick={this.handleClick}>
+            <div
+              className="square"
+              id="ID0"
+              value={this.state.board.ID0}
+              onClick={this.handleClick}
+            >
               {this.state.board.ID0}
-            </button>
-            <button 
-              className="square" 
-              id="ID1" 
-              value={this.state.board.ID1} 
-              onClick={this.handleClick}>
+            </div>
+            <div
+              className="square"
+              id="ID1"
+              value={this.state.board.ID1}
+              onClick={this.handleClick}
+            >
               {this.state.board.ID1}
-            </button>
-            <button 
-              className="square" 
+            </div>
+            <div
+              className="square"
               id="ID2"
-              value={this.state.board.ID2} 
-              onClick={this.handleClick}>
+              value={this.state.board.ID2}
+              onClick={this.handleClick}
+            >
               {this.state.board.ID2}
-            </button>
+            </div>
 
-            <button 
-              className="square" 
+            <div
+              className="square"
               id="ID3"
-              value={this.state.board.ID3} 
-              onClick={this.handleClick}>
+              value={this.state.board.ID3}
+              onClick={this.handleClick}
+            >
               {this.state.board.ID3}
-            </button>
-            <button 
-              className="square" 
+            </div>
+            <div
+              className="square"
               id="ID4"
-              value={this.state.board.ID4} 
-              onClick={this.handleClick}>
+              value={this.state.board.ID4}
+              onClick={this.handleClick}
+            >
               {this.state.board.ID4}
-            </button>
-            <button 
-              className="square" 
+            </div>
+            <div
+              className="square"
               id="ID5"
-              value={this.state.board.ID5} 
-              onClick={this.handleClick}>
+              value={this.state.board.ID5}
+              onClick={this.handleClick}
+            >
               {this.state.board.ID5}
-            </button>
+            </div>
 
-            <button 
-              className="square" 
+            <div
+              className="square"
               id="ID6"
-              value={this.state.board.ID6} 
-              onClick={this.handleClick}>
+              value={this.state.board.ID6}
+              onClick={this.handleClick}
+            >
               {this.state.board.ID6}
-            </button>
-            <button 
-              className="square" 
+            </div>
+            <div
+              className="square"
               id="ID7"
-              value={this.state.board.ID7} 
-              onClick={this.handleClick}>
+              value={this.state.board.ID7}
+              onClick={this.handleClick}
+            >
               {this.state.board.ID7}
-            </button>
-            <button 
-              className="square" 
+            </div>
+            <div
+              className="square"
               id="ID8"
-              value={this.state.board.ID8} 
-              onClick={this.handleClick}>
+              value={this.state.board.ID8}
+              onClick={this.handleClick}
+            >
               {this.state.board.ID8}
-            </button>
+            </div>
           </div>
         </div>
       );
