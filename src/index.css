@@ -11,3 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.squares{
+  background: #272727;
+  border: none; 
+  font-size: 5rem; 
+  cursor: pointer;
+  outline: none; 
+
+}
+
+.X{
+  color: red; 
+}
+.O{
+  color: green; 
+}

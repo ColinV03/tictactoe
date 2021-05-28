@@ -11,18 +11,27 @@ class Gameboard extends Component {
       playerTwoSign: "O",
       currentSign: "X",
       board: {
-        ID0: "",
-        ID1: "",
-        ID2: "",
-        ID3: "",
-        ID4: "", 
-        ID5: "", 
-        ID6: "", 
-        ID7: "", 
-        ID8: "",       
+        ID0: " ",
+        ID1: " ",
+        ID2: " ",
+        ID3: " ",
+        ID4: " ", 
+        ID5: " ", 
+        ID6: " ", 
+        ID7: " ", 
+        ID8: " ",       
       }
       
     };
+  }
+  
+  setPlayerId = (e) => {
+    e.preventDefault();
+    const { name } = e;
+    this.setState({
+      [name]: e[name].value
+    });
+    console.log(this.state)
   }
 
   handleChange = (e) => {
@@ -43,6 +52,7 @@ class Gameboard extends Component {
   }
   //alternate player sign
   setCurrentSign = () => {
+    
     if (!this.state.isPlayerOneTurn) {
       this.setState({
         currentSign: this.state.playerTwoSign,
@@ -77,7 +87,7 @@ class Gameboard extends Component {
     // let playerNames =() =>  this.state.playerOneId === '' ? '' : <div>{this.state.playerOneId} Versus {this.state.playerTwoId}</div>
       return (
         <div>
-          <form>
+          <form id="form">
             <input
               name="playerOneId"
               placeholder="Player One Name?"
@@ -92,8 +102,17 @@ class Gameboard extends Component {
               onChange={this.handleChange}
               type="text"
             />
+            <br/>
+            <button onSubmit={this.setPlayerId} >submit</button>
           </form>
+          <div>
+            {this.state.playerOneId}
+             VS 
+            {this.state.playerTwoId}
 
+
+          </div>
+          
           <br></br>
 
           <div className="grid">
